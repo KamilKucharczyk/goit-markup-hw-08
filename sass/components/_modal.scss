@@ -1,0 +1,194 @@
+.backdrop {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.2);
+  transition-duration: 1s;
+  transition-property: opacity, visibility;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal {
+  position: relative;
+  width: 528px;
+  height: 581px;
+  background-color: $backgroundPageColor;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__title {
+    width: 448px;
+    height: 23px;
+    font-weight: $fontL;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-top: 40px;
+    margin-left: 40px;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    font-weight: $fontS;
+    font-size: 12px;
+    margin-left: 40px;
+    color: $textGreyColor;
+  }
+
+  &__input {
+    position: relative;
+    margin-top: 4px;
+    width: 448px;
+    height: 40px;
+    background-color: $backgroundPageColor;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: $borderRadiusFrame;
+    padding-left: 40px;
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__username-icon {
+    position: absolute;
+    left: 52px;
+    top: 104px;
+  }
+
+  &__phone-icon {
+    position: absolute;
+    top: 174.26px;
+    left: 54.27px;
+  }
+
+  &__email-icon {
+    position: absolute;
+    top: 243px;
+    left: 53.5px;
+  }
+
+  &__input:focus-within,
+  &__input:focus-within + &__username-icon {
+    outline-color: $backgroundColorBlue;
+    fill: $backgroundColorBlue;
+  }
+
+  &__input:focus-within,
+  &__input:focus-within + &__phone-icon {
+    outline-color: $backgroundColorBlue;
+    fill: $backgroundColorBlue;
+  }
+
+  &__input:focus-within,
+  &__input:focus-within + &__email-icon {
+    outline-color: $backgroundColorBlue;
+    fill: $backgroundColorBlue;
+  }
+
+  &__textarea {
+    margin-top: 4px;
+    margin-bottom: 20px;
+    width: 448px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+    font-weight: $fontS;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+    padding-top: 12px;
+    padding-left: 16px;
+  }
+
+  &__textarea:focus-within {
+    outline-color: $backgroundColorBlue;
+  }
+
+  &__checkbox-label {
+    display: inline-flex;
+    align-items: center;
+    width: 420px;
+    height: 24px;
+    margin-left: 54px;
+    font-weight: $fontS;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: $textGreyColor;
+  }
+
+  &__checkbox-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip: rect(1px, 1px, 1px, 1px);
+    width: 16px;
+    height: 15px;
+  }
+
+  &__icon-check {
+    border: 2px solid $texPrimaryColor;
+    width: 16px;
+    height: 15px;
+    border-radius: 2px;
+    margin-right: 8px;
+  }
+
+  &__checkbox-input:checked + &__icon-check {
+    background-color: $backgroundColorBlue;
+    border-color: $backgroundColorBlue;
+  }
+
+  &__link {
+    color: $backgroundColorBlue;
+  }
+
+  &__button {
+    position: absolute;
+    top: 491px;
+    left: 164px;
+    width: 200px;
+    height: 50px;
+    background-color: $backgroundColorBlue;
+    border: $backgroundColorBlue;
+    color: $textWhiteColor;
+    font-weight: $fontL;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: $borderRadiusFrame;
+  }
+
+  &__button-close {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    right: 0;
+    margin-top: 8px;
+    margin-right: 8px;
+    background: $backgroundPageColor;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: $texPrimaryColor;
+    border-radius: 50%;
+  }
+}

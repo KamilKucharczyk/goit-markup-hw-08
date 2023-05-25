@@ -1,0 +1,47 @@
+.order {
+  background-color: $backgroundColorDark;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/primary-header-background.jpg);
+  border: 1px solid #000000;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1600px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin: auto;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  &__header {
+    color: $textWhiteColor;
+    font-weight: $fontXL;
+    font-size: 44px;
+    line-height: 1.4;
+    text-align: center;
+    letter-spacing: 0.06em;
+    max-width: 696px;
+  }
+  &__button {
+    background-color: $backgroundColorBlue;
+    color: $textWhiteColor;
+    font-weight: $fontL;
+    font-size: 16px;
+    line-height: 1.88;
+    padding-top: 10px;
+    padding-right: 41px;
+    padding-bottom: 10px;
+    padding-left: 42px;
+    width: 200px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-style: none;
+  }
+}

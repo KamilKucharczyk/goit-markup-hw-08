@@ -1,0 +1,146 @@
+.page-header {
+  background-color: $backgroundPageColor;
+  border-bottom: 1px solid $headerBorderColor;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__logo {
+    color: $texPrimaryColor;
+    font-family: $fontLogo;
+    font-weight: $fontL;
+    font-size: 26px;
+    line-height: 1.2;
+    text-decoration: none;
+    padding: 24px 0 25px;
+    margin-right: 93px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.logo__dark {
+  color: $textBlueColor;
+  font-family: $fontLogo;
+  font-weight: $fontL;
+  font-size: 26px;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.navigation {
+  &__list {
+    display: flex;
+    gap: 46px;
+    list-style-type: none;
+    width: 254px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-right: 345px;
+  }
+
+  &__link {
+    font-weight: $fontM;
+    font-size: 14px;
+    line-height: 1.14;
+    color: $texPrimaryColor;
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $textBlueColor;
+  }
+
+  .active-page &__link {
+    color: $textBlueColor;
+  }
+}
+
+.active-page {
+  position: relative;
+}
+
+.active-page::after {
+  content: "";
+  position: absolute;
+  width: 53px;
+  height: 4px;
+  background-color: $backgroundColorBlue;
+  border-radius: 2px;
+  margin-top: 28px;
+  display: block;
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 30px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  &__item:hover,
+  &__item:focus {
+    fill: $textBlueColor;
+  }
+
+  &__mail-icon {
+    width: 16px;
+    height: 12px;
+    vertical-align: middle;
+    margin-right: 10px;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__mail-link {
+    font-weight: $fontM;
+    font-size: 14px;
+    line-height: 1.14;
+    color: $textGreyColor;
+    fill: currentColor;
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__mail-link:hover,
+  &__mail-link:focus {
+    color: $textBlueColor;
+  }
+
+  &__tel-icon {
+    width: 10px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 10px;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__tel-link {
+    font-weight: $fontM;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: $textGreyColor;
+    fill: currentColor;
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__tel-link:hover,
+  &__tel-link:focus {
+    color: $textBlueColor;
+  }
+}

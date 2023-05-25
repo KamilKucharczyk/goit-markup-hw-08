@@ -1,0 +1,155 @@
+.page-footer {
+  background-color: $backgroundColorDark;
+  display: flex;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    gap: 30px;
+  }
+
+  &__logo {
+    color: $textWhiteColor;
+    font-family: $fontLogo;
+    font-weight: $fontL;
+    font-size: 26px;
+    line-height: 1.2;
+    text-decoration: none;
+    width: fit-content;
+  }
+
+  .container {
+    display: flex;
+  }
+}
+
+.logo__bright {
+  color: $textBlueColor;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  width: fit-content;
+  font-style: normal;
+
+  &__mail {
+    font-style: normal;
+    color: $textGreyColor;
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__location {
+    font-style: normal;
+    font-weight: $fontS;
+    color: $textWhiteColor;
+    font-size: 14px;
+    line-height: 1.71;
+  }
+
+  &__mail:hover,
+  &__mail:focus {
+    color: $textBlueColor;
+  }
+}
+
+.footer-social {
+  padding-top: 72px;
+  margin-left: 70px;
+
+  &__title {
+    font-weight: $fontL;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $textWhiteColor;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+  }
+
+  &__link {
+    padding: 12px;
+    border-radius: 50%;
+    display: flex;
+    fill: $textWhiteColor;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__icon {
+    fill: $textWhiteColor;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    background-color: $backgroundColorBlue;
+  }
+}
+
+.newsletter {
+  margin-left: 78px;
+
+  &__form {
+    display: flex;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    color: $textWhiteColor;
+    font-weight: $fontL;
+    font-size: 14px;
+    padding-top: 72px;
+  }
+
+  &__input {
+    margin-top: 20px;
+    width: 358px;
+    height: 50px;
+    padding-left: 16px;
+    border: 1px solid rgba(255, 252, 252, 0.925);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: $borderRadiusFrame;
+    background-color: $backgroundColorDark;
+    color: $textWhiteColor;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    padding-left: 42px;
+    gap: 24px;
+    width: 200px;
+    height: 50px;
+    margin-left: 12px;
+    margin-top: 108px;
+    background-color: $backgroundColorBlue;
+    color: $textWhiteColor;
+    font-weight: $fontL;
+    font-size: 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: $borderRadiusFrame;
+    border: none;
+  }
+
+  ::placeholder {
+    color: $textWhiteColor;
+  }
+}
