@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework 5 - Main Page</title>
+    <title>Homework 8 - Main Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,6 +27,14 @@
         <a href="index.html" class="logo page-header__logo"
           ><span class="logo__dark">Web</span>Studio</a
         >
+        <button
+        class="page-header__hamburger js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu">
+        <svg class="page-header__menu-icon" width="40" height="40">
+        <use href="./images/icons.svg#icon-menu_40px"></use></svg>
+        </button>
+
         <nav class="navigation">
           <ul class="navigation__list">
             <li>
@@ -177,11 +185,19 @@
             <li class="member__card">
               <figure>
                 <img
-                  src="./images/photo1.jpg"
-                  alt="Product Designer"
-                  width="270"
-                  height="260"
+                src="./images/photo1.jpg"
+                alt="Product Designer"
+                srcset="
+                 images/Team-img/photo1-450@1x.jpg 450w,
+                 images/Team-img/photo1-450@2x.jpg 900w,
+                 images/Team-img/photo1-354@1x.jpg 354w,
+                 images/Team-img/photo1-354@2x.jpg 708w,  
+                 images/Team-img/photo1-270@1x.jpg 270w,
+                 images/Team-img/photo1-270@2x.jpg 540w,
+                "
+                sizes="(min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
                 />
+
                 <figcaption>
                   <h4 class="member__name">Jon Doe</h4>
                   <p class="member__description">Product Designer</p>
@@ -222,10 +238,18 @@
             <li class="member__card">
               <figure>
                 <img
-                  src="./images/photo2.jpg"
-                  alt="Frontend Developer"
-                  width="270"
-                  height="260"
+                src="./images/photo2.jpg"
+                alt="Frontend Developer"
+                srcset="
+                 images/Team-img/photo2-450@1x.jpg 450w,
+                 images/Team-img/photo2-450@2x.jpg 900w,
+                 images/Team-img/photo2-354@1x.jpg 354w,
+                 images/Team-img/photo2-354@2x.jpg 708w,  
+                 images/Team-img/photo2-270@1x.jpg 270w,
+                 images/Team-img/photo2-270@2x.jpg 540w,
+                 
+                "
+                sizes="(min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
                 />
                 <figcaption>
                   <h4 class="member__name">Jon Doe</h4>
@@ -267,10 +291,18 @@
             <li class="member__card">
               <figure>
                 <img
-                  src="./images/photo3.jpg"
-                  alt="Marketer"
-                  width="270"
-                  height="260"
+                src="./images/photo3.jpg"
+                alt="Marketer"
+                srcset="
+                 images/Team-img/photo3-450@1x.jpg 450w,
+                 images/Team-img/photo3-450@2x.jpg 900w,
+                 images/Team-img/photo3-354@1x.jpg 354w,
+                 images/Team-img/photo3-354@2x.jpg 708w,  
+                 images/Team-img/photo3-270@1x.jpg 270w,
+                 images/Team-img/photo3-270@2x.jpg 540w,
+                 
+                "
+                sizes="(min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
                 />
                 <figcaption>
                   <h4 class="member__name">Jon Doe</h4>
@@ -312,10 +344,18 @@
             <li class="member__card">
               <figure>
                 <img
-                  src="./images/photo4.jpg"
-                  alt="UI Designer"
-                  width="270"
-                  height="260"
+                src="./images/photo4.jpg"
+                alt="UI Designer"
+                srcset="
+                 images/Team-img/photo4-450@1x.jpg 450w,
+                 images/Team-img/photo4-450@2x.jpg 900w,
+                 images/Team-img/photo4-354@1x.jpg 354w,
+                 images/Team-img/photo4-354@2x.jpg 708w,  
+                 images/Team-img/photo4-270@1x.jpg 270w,
+                 images/Team-img/photo4-270@2x.jpg 540w,
+                 
+                "
+                sizes="(min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
                 />
                 <figcaption>
                   <h4 class="member__name">Jon Doe</h4>
@@ -479,6 +519,51 @@
       </div>
     </footer>
 
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button type="button" class="menu-container__close-button js-close-menu">
+        <svg width="18" height="18">
+          <use href="./images/icons.svg#icon-menu_40px"></use>
+        </svg>
+      </button>
+        <ul class="menu-container__mobile-menu">
+        <li>
+          <a href="index.html" class="menu-container__link">Agencja</a>
+        </li>
+        <li>
+          <a href="portfolio.html" class="menu-container__link">Portfolio</a>
+        </li>
+        <li>
+          <a href="kontakt" class="menu-container__link">Kontakt</a>
+        </li>
+      </ul>
+      <div class="menu-container__mobile-contact">
+          <a href="tel:+48111111111" class="menu-container__tel">
+            +48 111 111 111
+          </a>
+          <a href="mailto:info@devstudio.com" class="menu-container__mail">
+            info@devstudio.com
+          </a>
+      </div>
+      <div>
+        <ul class="mobile-social">
+          <li class="mobile-social__item">
+            <a href="#" class="mobile-social__link">Instagram</a>
+          </li>
+          <li class="mobile-social__item">
+            <a href="#" class="mobile-social__link">Twitter</a>
+          </li>
+          <li class="mobile-social__item">
+            <a href="#" class="mobile-social__link">Facebook</a>
+          </li>
+          <li class="mobile-social__item">
+            <a href="#" class="mobile-social__link">Linkedin</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal__button-close" data-modal-close>X</button>
@@ -533,6 +618,15 @@
         </form>
       </div>
     </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
+
     <script src="js/modal.js"></script>
   </body>
 </html>

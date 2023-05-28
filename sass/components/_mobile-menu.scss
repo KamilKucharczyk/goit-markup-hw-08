@@ -1,0 +1,84 @@
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container {
+  background-color: $backgroundPageColor;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateX(100%);
+  transition: transform 250ms ease;
+
+  @include tablet {
+    display: none;
+  }
+
+  @include desktop {
+    display: none;
+  }
+
+  &__close-button {
+    position: absolute;
+    top: 21px;
+    right: 25px;
+    background-color: transparent;
+    border: none;
+  }
+
+  &__close-button:hover,
+  &__close-button:focus {
+    fill: $backgroundColorBlue;
+  }
+
+  &__mobile-menu {
+    margin-top: 48px;
+    margin-left: 40px;
+    font-weight: $fontM;
+    font-size: 40px;
+    letter-spacing: 0.02em;
+    gap: 32px;
+  }
+
+  &__link {
+    color: $texPrimaryColor;
+    text-decoration: none;
+  }
+
+  &__mobile-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-left: 40px;
+  }
+
+  &__tel {
+    font-weight: $fontM;
+    font-size: 34px;
+    text-decoration: none;
+    color: $textBlueColor;
+  }
+
+  &__mail {
+    font-weight: $fontM;
+    font-size: 24px;
+    text-decoration: none;
+    color: $textGreyColor;
+  }
+}
+
+.mobile-social {
+  display: flex;
+  gap: 20px;
+  margin-left: 40px;
+  margin-bottom: 48px;
+
+  &__link {
+    text-decoration: none;
+    color: $textBlueColor;
+    font-weight: $fontM;
+    font-size: 18px;
+  }
+}

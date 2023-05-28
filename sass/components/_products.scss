@@ -1,4 +1,10 @@
 .product {
+  display: none;
+
+  @include desktop {
+    display: flex;
+  }
+
   padding-top: 0;
 
   &__header {
@@ -11,13 +17,13 @@
 
   &__list {
     display: flex;
-    list-style-type: none;
     gap: 30px;
     width: 370px;
   }
 
   &__label {
     position: relative;
+    width: 370px;
   }
 
   &__name {

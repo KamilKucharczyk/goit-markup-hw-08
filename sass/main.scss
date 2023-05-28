@@ -1,6 +1,7 @@
 @import "utils/variables";
+@import "utils/mixins";
 @import "components/globals";
-@import "components/container";
+
 @import "components/page-header";
 @import "components/order-section";
 @import "components/features";
@@ -10,9 +11,4 @@
 @import "components/page-footer";
 @import "components/modal";
 @import "components/projects";
-
-body {
-  background-color: $backgroundPageColor;
-  color: $texPrimaryColor;
-  font-family: $fontPrimary, sans-serif;
-}
+@import "components/mobile-menu";

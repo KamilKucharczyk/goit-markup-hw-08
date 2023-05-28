@@ -3,3 +3,39 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: $backgroundPageColor;
+  color: $texPrimaryColor;
+  font-family: $fontPrimary, sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @include tablet {
+    max-width: 768px;
+  }
+
+  @include desktop {
+    max-width: 1200px;
+  }
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}

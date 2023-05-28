@@ -1,27 +1,48 @@
 .page-footer {
   background-color: $backgroundColorDark;
   display: flex;
+  flex-direction: column;
+
+  @include desktop {
+    flex-direction: row;
+  }
 
   &__container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding-top: 60px;
     padding-bottom: 60px;
-    gap: 30px;
+  }
+
+  @include desktop {
+    align-items: flex-start;
   }
 
   &__logo {
     color: $textWhiteColor;
     font-family: $fontLogo;
     font-weight: $fontL;
-    font-size: 26px;
+    font-size: 24px;
     line-height: 1.2;
     text-decoration: none;
     width: fit-content;
+    text-align: center;
+    margin-bottom: 20px;
+
+    @include desktop {
+      font-size: 26px;
+    }
   }
 
   .container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include desktop {
+      flex-direction: row;
+    }
   }
 }
 
@@ -32,9 +53,14 @@
 .address {
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  align-items: center;
+  gap: 8px;
   width: fit-content;
   font-style: normal;
+
+  @include desktop {
+    gap: 8px;
+  }
 
   &__mail {
     font-style: normal;
@@ -60,8 +86,17 @@
 }
 
 .footer-social {
-  padding-top: 72px;
-  margin-left: 70px;
+  margin-bottom: 60px;
+
+  @include tablet {
+    padding-top: 65px;
+    margin-left: 144px;
+  }
+
+  @include desktop {
+    padding-top: 72px;
+    margin-left: 70px;
+  }
 
   &__title {
     font-weight: $fontL;
@@ -71,11 +106,16 @@
     text-transform: uppercase;
     color: $textWhiteColor;
     margin-bottom: 20px;
+    text-align: center;
+
+    @include desktop {
+      text-align: start;
+    }
   }
 
   &__list {
     display: flex;
-    list-style-type: none;
+    align-items: center;
     gap: 10px;
   }
 
@@ -103,32 +143,51 @@
 }
 
 .newsletter {
-  margin-left: 78px;
+  @include desktop {
+    margin-left: 78px;
+  }
 
   &__form {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    align-items: unset;
   }
 
   &__label {
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-transform: uppercase;
     color: $textWhiteColor;
     font-weight: $fontL;
     font-size: 14px;
-    padding-top: 72px;
+
+    @include desktop {
+      padding-top: 72px;
+    }
   }
 
   &__input {
     margin-top: 20px;
-    width: 358px;
+    width: 450px;
     height: 50px;
-    padding-left: 16px;
+    padding-left: 15px;
     border: 1px solid rgba(255, 252, 252, 0.925);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: $borderRadiusFrame;
     background-color: $backgroundColorDark;
     color: $textWhiteColor;
+    margin-bottom: 20px;
+
+    @include desktop {
+      width: 358px;
+      height: 50px;
+    }
   }
 
   &__button {
@@ -139,7 +198,7 @@
     width: 200px;
     height: 50px;
     margin-left: 12px;
-    margin-top: 108px;
+    margin-bottom: 60px;
     background-color: $backgroundColorBlue;
     color: $textWhiteColor;
     font-weight: $fontL;
