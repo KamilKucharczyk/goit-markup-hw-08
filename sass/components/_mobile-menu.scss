@@ -49,6 +49,11 @@
     text-decoration: none;
   }
 
+  &__link:hover,
+  &__focus:focus {
+    color: $textBlueColor;
+  }
+
   &__mobile-contact {
     display: flex;
     flex-direction: column;

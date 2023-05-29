@@ -151,11 +151,6 @@
 }
 
 .newsletter {
-  @include tablet {
-    grid-area: span 2;
-    justify-self: center;
-  }
-
   @include desktop {
     margin-left: 78px;
   }
@@ -197,6 +192,7 @@
     background-color: $backgroundColorDark;
     color: $textWhiteColor;
     margin-bottom: 20px;
+    resize: vertical;
 
     @include desktop {
       width: 358px;
