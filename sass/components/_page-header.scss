@@ -4,7 +4,7 @@
 
   &__container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   &__logo {
@@ -25,6 +25,7 @@
 
     @include desktop {
       padding-top: 24px;
+      padding-bottom: 25px;
       padding-left: 215px;
     }
   }
@@ -34,7 +35,6 @@
   }
 
   @include desktop {
-    font-size: 26px;
     margin-right: 93px;
   }
 
@@ -70,10 +70,6 @@
     margin-right: auto;
   }
 
-  @include desktop {
-    margin-left: 93px;
-  }
-
   &__list {
     display: flex;
     padding-top: 32px;
@@ -86,7 +82,6 @@
 
     @include desktop {
       gap: 46px;
-      margin-left: 93px;
     }
   }
 

@@ -30,14 +30,16 @@
   }
 
   &__icon {
-    padding: 25px 190px;
+    display: flex;
+    justify-content: center;
+    padding: 25px 0;
 
     @include tablet {
-      padding: 25px 142px;
+      padding: 25px 0;
     }
 
     @include desktop {
-      padding: 25px 100px;
+      padding: 25px 0;
     }
   }
 
